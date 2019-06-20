@@ -1,11 +1,17 @@
+from Tree import Tree
+
+
 class Huffman:
-    def __init__(self):
-        pass
+    def __init__(self, s_input):
+        if s_input is None:
+            raise Exception('A string is needed for Huffman algo initialization')
+        self.s_input = s_input
+        self.tree = Tree(s_input)
 
-    @staticmethod
-    def compress(s_input):
-        return s_input
+    def compress(self):
+        return self.s_input
 
-    @staticmethod
-    def decompress(s_input):
-        return s_input
+    def decompress(self):
+        return self.s_input
+
+
